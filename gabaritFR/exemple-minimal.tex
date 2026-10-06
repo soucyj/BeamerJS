@@ -1,0 +1,37 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = fr_CA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Exemple minimal BeamerJS : le point de départ d'une nouvelle présentation.
+%  Exemple d'utilisation de la classe BeamerJS de Jérôme Soucy.
+%  Contrairement à BeamerJS.cls, ce fichier peut être copié et modifié
+%  librement, sans condition : c'est le point de départ de vos présentations.
+%
+%  Pour tout le reste, voir demonstration.tex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{BeamerJS}
+
+\title{Titre de l'exposé}
+\subtitle{Sous-titre facultatif}
+\author{Prénom Nom}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}[plain,noframenumbering]
+	\titlepage
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Un premier résultat}
+	\begin{thm}[Pythagore]
+		Dans un triangle rectangle d'hypoténuse $c$, on a $a^2+b^2=c^2$.
+	\end{thm}
+
+	\begin{apoint}
+		Remplacez ce contenu par le vôtre.
+	\end{apoint}
+\end{frame}
+
+\end{document}

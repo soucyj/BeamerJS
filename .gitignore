@@ -1,0 +1,20 @@
+# Fichiers auxiliaires LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# Archives produites par outils/archives-overleaf.sh
+dist/
+
+.DS_Store

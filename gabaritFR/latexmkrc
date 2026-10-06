@@ -1,0 +1,2 @@
+# Overleaf et latexmk : compiler avec XeLaTeX
+$pdf_mode = 5;

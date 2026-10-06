@@ -1,0 +1,38 @@
+name: Compiler les gabarits
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Les deux classes ont le même code
+        run: python3 outils/verifier-classes.py
+
+  compiler:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - dossier: gabaritFR
+            fichiers: |
+              exemple-minimal.tex
+              demonstration.tex
+          - dossier: templateEN
+            fichiers: |
+              minimal-example.tex
+              demo.tex
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: ${{ matrix.dossier }}
+          root_file: ${{ matrix.fichiers }}
+          latexmk_use_xelatex: true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf-${{ matrix.dossier }}
+          path: ${{ matrix.dossier }}/*.pdf
